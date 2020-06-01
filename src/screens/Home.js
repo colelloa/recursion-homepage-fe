@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { Parallax, Background } from 'react-parallax';
+import skyline from '../assets/skyline.jpg'
+import computer from '../assets/computer.jpg'
 
-const image1 =
-  "https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D";
 
   const image2 =
   "https://img00.deviantart.net/2bd0/i/2009/276/c/9/magic_forrest_wallpaper_by_goergen.jpg";
 const image3 =
   "https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5297440765001_5280261645001-vs.jpg?pubId=5104226627001&videoId=5280261645001";
-const image4 =
-  "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/empire-state-building-black-and-white-square-format-john-farnan.jpg";
 
 
   const styles = {
@@ -29,46 +27,36 @@ class Home extends Component {
     state = {  }
     render() {
         return <>
-    <Parallax bgImage={image1} strength={500}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>HTML inside the parallax</div>
-      </div>
-    </Parallax>
-    <Parallax bgImage={image3} blur={{ min: -1, max: 3 }}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>Dynamic Blur</div>
-      </div>
-    </Parallax>
-    <Parallax bgImage={image2} strength={-100}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>Reverse direction</div>
-      </div>
-    </Parallax>
     <Parallax
-      bgImage={image4}
+      bgImage={computer}
       strength={200}
-      renderLayer={percentage => (
-        <div>
-          <div
-            style={{
-              position: "absolute",
-              background: `rgba(255, 125, 0, ${percentage * 1})`,
-              left: "50%",
-              top: "50%",
-              borderRadius: "50%",
-              transform: "translate(-50%,-50%)",
-              width: percentage * 500,
-              height: percentage * 500
-            }}
-          />
-        </div>
-      )}
+      // renderLayer={percentage => (
+      //   <div>
+      //     <div
+      //       style={{
+      //         position: "absolute",
+      //         background: `rgba(255, 125, 0, ${percentage * 1})`,
+      //         left: "50%",
+      //         top: "50%",
+      //         borderRadius: "50%",
+      //         transform: "translate(-50%,-50%)",
+      //         width: percentage * 500,
+      //         height: percentage * 500
+      //       }}
+      //     />
+      //   </div>
+      // )}
     >
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>renderProp</div>
+      <div style={{ height: 800 }}>
+        <div style={insideStyles}>Services</div>
       </div>
     </Parallax>
-
+    <div style={{padding:20}}></div>
+    <Parallax bgImage={skyline} strength={900}>
+      <div style={{ height: 800 }}>
+        <div style={insideStyles}>About</div>
+      </div>
+    </Parallax>
         </>
         ;
     }

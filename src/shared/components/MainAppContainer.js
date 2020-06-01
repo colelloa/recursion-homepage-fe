@@ -15,7 +15,7 @@ class MainAppContainer extends Component {
                 <Navbar />
               </Header></Affix>
               <Content style={{ padding: '0 50px' }}>
-                <div style={{ padding: 24 }}>
+                <div>
                     <ContentArea />
                 </div>
               </Content>

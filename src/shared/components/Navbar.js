@@ -19,6 +19,16 @@ class Navbar extends Component {
                 <Link to={HOME_URL} >Home
                 </Link>
             </Menu.Item>
+            <Menu.Item key={HOME_URL}>
+                <Link to={HOME_URL} >About
+                </Link>
+            </Menu.Item>
+            <Menu.Item key={HOME_URL}>
+                <Link to={HOME_URL} >Contact
+                </Link>
+            </Menu.Item>
+
+
           </Menu>
         </>
     }
