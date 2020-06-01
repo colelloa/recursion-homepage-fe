@@ -6,17 +6,20 @@ import {
     HOME_URL, 
 } from '../constants'
 
+
 class Navbar extends Component {
     render() {
         return <>
-                <Menu >
-                    <Menu.Item key={HOME_URL}>
-                        <Link to={HOME_URL} > 
-                        <div className='logo'> <img style={{height:'auto', width: 15, marginRight:3, marginBottom:4}} src='' alt='' 
-                        /> Recursion Labs </div> 
-                        </Link>
-                    </Menu.Item>
-                </Menu>
+          <Menu style={{ backgroundColor: 'grey', lineHeight: '64px'}} 
+            theme="dark" 
+            mode="horizontal" 
+            openKeys={['adminMenu', 'mainMenu']}
+            selectable={false}>
+            <Menu.Item key={HOME_URL}>
+                <Link to={HOME_URL} >Home
+                </Link>
+            </Menu.Item>
+          </Menu>
         </>
     }
 }

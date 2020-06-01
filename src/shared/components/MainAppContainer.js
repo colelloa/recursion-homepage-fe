@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { withRouter } from "react-router"
 import { connect } from 'react-redux'
-import { Layout } from 'antd'
+import { Layout, Affix } from 'antd'
 import { ContentArea, Navbar } from '../components'
+
 
 const { Header, Content, Footer } = Layout
 
@@ -10,11 +11,11 @@ class MainAppContainer extends Component {
     render() {
         return <>
             <Layout className="layout">
-              <Header style={{}}>
+              <Affix><Header style={{backgroundColor: 'grey'}}>
                 <Navbar />
-              </Header>
+              </Header></Affix>
               <Content style={{ padding: '0 50px' }}>
-                <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+                <div style={{ padding: 24, minHeight: 3000 }}>
                     <ContentArea />
                 </div>
               </Content>
