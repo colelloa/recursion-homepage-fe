@@ -39,13 +39,11 @@ class Home extends Component {
         <div style={insideStyles}>Dynamic Blur</div>
       </div>
     </Parallax>
-    <h1>| | |</h1>
     <Parallax bgImage={image2} strength={-100}>
       <div style={{ height: 500 }}>
         <div style={insideStyles}>Reverse direction</div>
       </div>
     </Parallax>
-    <h1>| | |</h1>
     <Parallax
       bgImage={image4}
       strength={200}
