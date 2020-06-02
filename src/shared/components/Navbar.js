@@ -19,11 +19,11 @@ class Navbar extends Component {
                 <Link to={HOME_URL} >Home
                 </Link>
             </Menu.Item>
-            <Menu.Item key={HOME_URL}>
+            <Menu.Item key={'ab'}>
                 <Link to={HOME_URL} >About
                 </Link>
             </Menu.Item>
-            <Menu.Item key={HOME_URL}>
+            <Menu.Item key={'co'}>
                 <Link to={HOME_URL} >Contact
                 </Link>
             </Menu.Item>
