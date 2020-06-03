@@ -38,7 +38,6 @@ import {
 class Home extends Component {
     render() {
         const { Title, Paragraph } = Typography
-        const { Meta } = Card;
 
         return <>
           <Cables />

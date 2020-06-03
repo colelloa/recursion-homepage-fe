@@ -15,6 +15,7 @@ import {
 } from './shared/components'
 import './shared/styles/main.scss'
 import reducer from './features/reducer'
+import logo from './assets/logo.png'
 
 import 'antd/dist/antd.css'
 
@@ -31,7 +32,7 @@ class App extends Component {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Recursion Labs</title>
-                <link rel="shortcut icon" id="favicon" href=''></link>
+                <link rel="shortcut icon" id="favicon" href={logo}></link>
             </Helmet>
             <MainAppContainer />
         </BrowserRouter>
