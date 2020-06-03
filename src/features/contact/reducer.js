@@ -11,6 +11,7 @@ export default produce ((draft = INITIAL_STATE, action) => {
         case SHOW_CONTACT:
             const { show } = action
             draft.showDrawer = show
+            break
 
         default:
             break

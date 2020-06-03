@@ -3,6 +3,13 @@ import { Menu, Anchor } from 'antd';
 import { connect } from 'react-redux'
 import { showContact } from '../../features/contact/actions'
 
+import {
+    CoffeeOutlined,
+    CodeOutlined,
+    PhoneOutlined
+  } from '@ant-design/icons'
+  
+
 const { Link } = Anchor;
 
 class Navbar extends Component {
@@ -14,16 +21,16 @@ class Navbar extends Component {
             mode="horizontal" 
             selectable={false}>
             <Menu.Item key={'se'}>
-                <Link href="#services"  title='SERVICES'>
+                <Link href="#services"  title={<><CodeOutlined /> SERVICES</>}>
                 </Link>
             </Menu.Item>
             <Menu.Item key={'ab'}>
-                <Link href="#about"  title='ABOUT'>
+                <Link href="#about"  title={<><CoffeeOutlined /> ABOUT</>}>
                 </Link>
             </Menu.Item>
 
             <Menu.Item key={'co'} onClick={() => this.props.showContact(true)}>
-                CONTACT
+                <><PhoneOutlined /> CONTACT</>
             </Menu.Item>
           </Menu>
           </Anchor>

@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { showContact } from '../../features/contact/actions'
 import { Drawer, Form, Input, InputNumber, Button } from 'antd';
+import {
+    UploadOutlined,
+  } from '@ant-design/icons'
+  
 
 const FORM_ITEM_NAME = 'submit'
 
@@ -67,7 +71,7 @@ class ContactDrawer extends Component {
                     <Input.TextArea />
                   </Form.Item>
                   <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
-                    <Button type="primary" htmlType="submit">
+                    <Button icon={<UploadOutlined />} type="primary" htmlType="submit">
                       Submit
                     </Button>
                   </Form.Item>

@@ -13,6 +13,12 @@ import {
   Typography,
 } from 'antd'
 
+import {
+  StockOutlined,
+  ProjectOutlined,
+  FormatPainterOutlined,
+} from '@ant-design/icons'
+
   const insideStyles = {
     background: "white",
     padding: 20,
@@ -32,6 +38,8 @@ import {
 class Home extends Component {
     render() {
         const { Title, Paragraph } = Typography
+        const { Meta } = Card;
+
         return <>
           <Cables />
           <Parallax
@@ -41,19 +49,19 @@ class Home extends Component {
             <div id='services' style={{ height: 800 }}>
               <Row style={{ height: '100%' }} justify='space-around' align='middle'>
                   <Col>
-                    <Card title='Develop' style={{width:'100%'}}>
+                    <Card title={<><ProjectOutlined /> Develop</>} style={{width:'100%'}}>
                       <Card.Grid style={servicesStyle}>Our team has everything you need to design, build, and grow any idea into a software solution</Card.Grid>
                       <Card.Grid style={servicesStyle}>Experience in building applications for healthcare, finance, cybersecurity, big data, and more</Card.Grid>
                     </Card>
                   </Col>
                   <Col>
-                    <Card title='Create' >
+                    <Card title={<><FormatPainterOutlined /> Create</>} >
                       <Card.Grid style={servicesStyle}>Expert product management, application architecture, and coding knowledge</Card.Grid>
                       <Card.Grid style={servicesStyle}>Track our progress in real-time as we make your project a reality</Card.Grid>
                     </Card>
                   </Col>
                   <Col>
-                    <Card title='Scale' >
+                    <Card title={<><StockOutlined /> Scale</>}>
                       <Card.Grid style={servicesStyle}>Extensive experience with data modeling, data engineering, and large-scale data analysis</Card.Grid>
                       <Card.Grid style={servicesStyle}>Long-term planning to ensure each project handles exponential user growth </Card.Grid>
                     </Card>
