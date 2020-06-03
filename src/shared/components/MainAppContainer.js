@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { withRouter } from "react-router"
-import { connect } from 'react-redux'
 import { Layout, Affix } from 'antd'
 import { ContentArea, Navbar} from '../components'
 
@@ -14,7 +13,7 @@ class MainAppContainer extends Component {
               <Affix><Header style={{backgroundColor: 'grey'}}>
                 <Navbar />
               </Header></Affix>
-              <Content style={{ padding: '0 50px' }}>
+              <Content >
                 <div>
                     <ContentArea />
                 </div>
@@ -25,8 +24,4 @@ class MainAppContainer extends Component {
     }
 }
 
-const mapStateToProps = ({  }) => {
-}
-
-export default connect (mapStateToProps, {
-}) (withRouter(MainAppContainer))
+export default withRouter(MainAppContainer)

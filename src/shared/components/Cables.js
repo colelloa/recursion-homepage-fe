@@ -23,7 +23,7 @@ class Cables extends React.Component {
 
   render() {
     return (
-        <div id="MYCONTAINERELEMENT" ref={this.canvasRef} style={{ width: "100%", "minHeight": "400px" }}/>
+        <div id="MYCONTAINERELEMENT" ref={this.canvasRef} />
     );
   }
 }

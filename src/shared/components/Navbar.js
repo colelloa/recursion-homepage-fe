@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Menu } from 'antd';
 import { Link, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux'
+import { showContact } from '../../features/contact/actions'
 
 import { 
     HOME_URL, 
@@ -15,23 +17,29 @@ class Navbar extends Component {
             mode="horizontal" 
             openKeys={['adminMenu', 'mainMenu']}
             selectable={false}>
-            <Menu.Item key={HOME_URL}>
-                <Link to={HOME_URL} >Home
+            <Menu.Item key={'se'}>
+                <Link to={HOME_URL} >SERVICES
                 </Link>
             </Menu.Item>
             <Menu.Item key={'ab'}>
-                <Link to={HOME_URL} >About
-                </Link>
-            </Menu.Item>
-            <Menu.Item key={'co'}>
-                <Link to={HOME_URL} >Contact
+                <Link to={HOME_URL} >ABOUT
                 </Link>
             </Menu.Item>
 
-
+            <Menu.Item key={'co'} onClick={() => this.props.showContact(true)}>
+                CONTACT
+            </Menu.Item>
           </Menu>
         </>
     }
 }
 
-export default withRouter(Navbar);
+const mapStateToProps = ({ contact }) => {
+    return { 
+        contact
+    }
+}
+
+export default connect (mapStateToProps, {
+    showContact 
+}) (withRouter(Navbar))

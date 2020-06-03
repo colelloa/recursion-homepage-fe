@@ -1,7 +1,7 @@
 
-import placeReducer from './place/reducer'
+import contactReducer from './contact/reducer'
 import { combineReducers } from 'redux'
 
 export default combineReducers ({
-    place: placeReducer
+    contact: contactReducer
 })
