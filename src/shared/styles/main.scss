@@ -3,23 +3,30 @@ body {
     overflow-x:hidden
 }
 
-.ant-anchor-ink::before {
+.ant-anchor-ink::before, .custom-wrapper-navbar, .custom-menu-navbar {
     background-color: grey !important;
 }
+
 
 .ant-anchor-ink-ball {
     display: none !important;
 }
 
-.ant-anchor-link-title {
+.ant-anchor-link-title, .ant-menu-item {
     color: rgba(255, 255, 255, 0.65) !important;
-
-}
-
-.ant-anchor-link {
-    padding-bottom: 23.5px !important;
 }
 
 .ant-anchor-link-title:hover {
     color: white !important;
+}
+
+.ant-anchor-link-title {
+    padding-bottom: 17.5px;
+}
+
+.contactDrawer {
+    .ant-drawer-content-wrapper, .ant-drawer-wrapper-body, .ant-drawer-header, .ant-drawer-title {
+        background-color: #fafafa;
+        border-bottom: none;
+    }
 }

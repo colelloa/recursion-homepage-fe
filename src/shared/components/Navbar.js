@@ -8,11 +8,10 @@ const { Link } = Anchor;
 class Navbar extends Component {
     render() {
         return <>
-        <Anchor style={{backgroundColor: 'grey'}}>
-          <Menu style={{ backgroundColor: 'grey', lineHeight: '64px'}} 
+        <Anchor className='custom-wrapper-navbar'>
+          <Menu className='custom-menu-navbar' style={{ lineHeight: '64px'}}  
             theme="dark" 
             mode="horizontal" 
-            openKeys={['adminMenu', 'mainMenu']}
             selectable={false}>
             <Menu.Item key={'se'}>
                 <Link href="#services"  title='SERVICES'>
