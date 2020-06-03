@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Parallax, Background } from 'react-parallax';
 import skyline from '../assets/skyline.jpg'
 import computer from '../assets/computer.jpg'
+import { Cables } from '../shared/components'
 
 
   const image2 =
@@ -27,6 +28,7 @@ class Home extends Component {
     state = {  }
     render() {
         return <>
+        <Cables />
     <Parallax
       bgImage={computer}
       strength={200}

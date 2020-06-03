@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from "react-router"
 import { connect } from 'react-redux'
 import { Layout, Affix } from 'antd'
-import { ContentArea, Navbar, Cables } from '../components'
+import { ContentArea, Navbar} from '../components'
 
 
 const { Header, Content, Footer } = Layout
@@ -17,7 +17,6 @@ class MainAppContainer extends Component {
               <Content style={{ padding: '0 50px' }}>
                 <div>
                     <ContentArea />
-                    <Cables />
                 </div>
               </Content>
               <Footer style={{ textAlign: 'center' }}>©2020 Recursion Labs LLC</Footer>
