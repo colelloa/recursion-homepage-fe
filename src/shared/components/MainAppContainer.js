@@ -7,16 +7,19 @@ const { Header, Content} = Layout
 
 class MainAppContainer extends Component {
     state = {
-      hideNav: true,
+      hideNav: false,
     }
     hideBar = () => {
-      window.scrollY > (window.screen.height * 0.7 / 2)
-      ? this.setState({ hideNav: false })
-      : this.setState({ hideNav: true })
+      window.screen.height > 1024 && window.scrollY <= (window.screen.height * 0.7 / 2)
+      ? this.setState({ hideNav: true })
+      : this.setState({ hideNav: false })
    }
 
    componentDidMount(){
        window.addEventListener('scroll', this.hideBar);
+       if (window.screen.height > 1024) {
+         this.setState({hideNav: true})
+       }
    }
 
    componentWillUnmount(){
