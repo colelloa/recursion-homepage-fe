@@ -2,9 +2,17 @@
 <html lang="en">
   <body style="background-color: black;">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <canvas id="glcanvas" width="1850" height="1100"></canvas>
+    <script>
+      if (screen && screen.width > 1024) {
+        document.write('<canvas id="glcanvas" width="1850" height="1100"><\/canvas>')
+      }
+    </script>
     <div id="root">
     </div>
-    <script src="https://www.recursion.dev/cables/js/patch.js"></script>
+    <script>
+      if (screen && screen.width > 1024) {
+        document.write('<script type="text/javascript" src="https://www.recursion.dev/cables/js/patch.js"><\/script>')
+      }
+    </script>
   </body>
 </html>

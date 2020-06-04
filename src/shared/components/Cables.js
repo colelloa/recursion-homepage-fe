@@ -9,6 +9,7 @@ class Cables extends React.Component {
 
   async componentDidMount() {
 
+      if (window.CABLES) {
         if (this.patch === null) {
             this.patch = new window.CABLES.Patch({
               patch: window.CABLES.exportedPatch,
@@ -19,6 +20,7 @@ class Cables extends React.Component {
             });
           }
           window.cgl = this.patch.cgl;
+        }
     }
 
   render() {
