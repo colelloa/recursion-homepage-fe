@@ -3,7 +3,7 @@ import { withRouter } from "react-router"
 import { Layout, Affix } from 'antd'
 import { ContentArea, Navbar} from '../components'
 
-const { Header, Content, Footer } = Layout
+const { Header, Content} = Layout
 
 class MainAppContainer extends Component {
     render() {
@@ -19,7 +19,6 @@ class MainAppContainer extends Component {
                     <ContentArea />
                 </div>
               </Content>
-              <Footer style={{ textAlign: 'center' }}>©2020 Recursion Labs LLC</Footer>
             </Layout>          
         </>;
     }

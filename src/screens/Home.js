@@ -11,16 +11,18 @@ import {
   Row,
   Col,
   Typography,
+  Button,
 } from 'antd'
 
 import {
   StockOutlined,
   ProjectOutlined,
   FormatPainterOutlined,
+  GithubOutlined,
+  LinkedinOutlined
 } from '@ant-design/icons'
 
   const insideStyles = {
-    background: "white",
     padding: 20,
     position: "absolute",
     top: "50%",
@@ -69,8 +71,7 @@ class Home extends Component {
             </div>
 
           </Parallax>
-
-          <Parallax bgImage={skyline} strength={900}>
+          <Parallax bgImage={''} strength={900}>
             <div id='about' style={{ height: 800 }}>
               <div style={insideStyles}>
               <Title>
@@ -118,7 +119,22 @@ In my free time, I've been learning the drumset and catching up on old-school ca
               </div>
             </div>
           </Parallax>
-
+          <Parallax bgImage={skyline} strength={900}>
+          <div style={{height: 400}}> 
+          <Row style={{ height: '100%' }} justify='space-around' align='middle'>
+            <div className='copyright'>©2020 Recursion Labs LLC {
+              <>
+              <Button style={{color: 'black', borderColor: 'black' }} ghost={true} icon={<GithubOutlined />}
+              onClick={() => window.open('https://www.linkedin.com/in/andrew-colello-4b58b1b7/')}
+              />
+              <Button style={{color: 'black', borderColor: 'black', marginLeft: 3}} ghost={true} icon={<LinkedinOutlined />}
+               onClick={() => window.open('https://www.github.com/colelloa')}
+              />
+              </>
+            }</div>
+          </Row>
+          </div>
+          </Parallax>
           <ContactDrawer />
         </>
     }
