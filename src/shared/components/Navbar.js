@@ -21,7 +21,7 @@ class Navbar extends Component {
             theme="dark" 
             mode="horizontal" 
             selectable={false}>
-            <Menu.Item key={'ho'}>
+            <Menu.Item key={'ho'} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <div className='logo'><img style={{height:'auto', width: 15, marginRight:3, marginBottom:4}} src={logo} alt='' /> Recursion Labs</div>
             </Menu.Item>
 
