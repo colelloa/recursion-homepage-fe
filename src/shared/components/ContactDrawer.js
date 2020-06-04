@@ -69,7 +69,7 @@ class ContactDrawer extends Component {
                   <Form.Item name={[FORM_ITEM_NAME, 'website']} label="Website">
                     <Input />
                   </Form.Item>
-                  <Form.Item name={[FORM_ITEM_NAME, 'introduction']} label="Introduction">
+                  <Form.Item name={[FORM_ITEM_NAME, 'introduction']} label="Details">
                     <Input.TextArea />
                   </Form.Item>
                   <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>

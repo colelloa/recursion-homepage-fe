@@ -124,10 +124,10 @@ In my free time, I've been learning the drumset and catching up on old-school ca
           <Row style={{ height: '100%' }} justify='space-around' align='middle'>
             <div className='copyright'>©2020 Recursion Labs LLC {
               <>
-              <Button style={{color: 'black', borderColor: 'black' }} ghost={true} icon={<GithubOutlined />}
+              <Button style={{color: 'black', borderColor: 'black' }} ghost={true} icon={<LinkedinOutlined />}
               onClick={() => window.open('https://www.linkedin.com/in/andrew-colello-4b58b1b7/')}
               />
-              <Button style={{color: 'black', borderColor: 'black', marginLeft: 3}} ghost={true} icon={<LinkedinOutlined />}
+              <Button style={{color: 'black', borderColor: 'black', marginLeft: 3}} ghost={true} icon={<GithubOutlined />}
                onClick={() => window.open('https://www.github.com/colelloa')}
               />
               </>
