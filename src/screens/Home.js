@@ -49,14 +49,14 @@ class Home extends Component {
               <Row style={{ height: '100%' }} justify='space-around' align='middle'>
                   <Col>
                     <Card title={<><ProjectOutlined /> Develop</>} style={{width:'100%'}}>
-                      <Card.Grid style={servicesStyle}>Our team has everything you need to design, build, and grow any idea into a software solution</Card.Grid>
+                      <Card.Grid style={servicesStyle}>Everything you need to design, build, and grow any idea into a software solution</Card.Grid>
                       <Card.Grid style={servicesStyle}>Experience in building applications for healthcare, finance, cybersecurity, big data, and more</Card.Grid>
                     </Card>
                   </Col>
                   <Col>
                     <Card title={<><FormatPainterOutlined /> Create</>} >
                       <Card.Grid style={servicesStyle}>Expert product management, application architecture, and coding knowledge</Card.Grid>
-                      <Card.Grid style={servicesStyle}>Track our progress in real-time as we make your project a reality</Card.Grid>
+                      <Card.Grid style={servicesStyle}>Track progress in real-time as your project becomes a reality</Card.Grid>
                     </Card>
                   </Col>
                   <Col>
@@ -65,8 +65,6 @@ class Home extends Component {
                       <Card.Grid style={servicesStyle}>Long-term planning to ensure each project handles exponential user growth </Card.Grid>
                     </Card>
                   </Col>
-
-
               </Row>
             </div>
 

@@ -4,14 +4,14 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script>
       if (screen && screen.width > 1024) {
-        document.write('<canvas id="glcanvas" width="1850" height="1100"><\/canvas>')
+        document.write(`<canvas id="glcanvas" width=${screen.width * 1.1} height=${screen.height*0.7}><\/canvas>`)
       }
     </script>
     <div id="root">
     </div>
     <script>
       if (screen && screen.width > 1024) {
-        document.write('<script type="text/javascript" src="https://www.recursion.dev/cables/js/patch.js"><\/script>')
+        document.write('<script type="text/javascript" src="http://www.recursion.dev/cables/js/patch.js"><\/script>')
       }
     </script>
   </body>

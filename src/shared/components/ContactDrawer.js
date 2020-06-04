@@ -22,9 +22,11 @@ class ContactDrawer extends Component {
         });
       };
       onFinish = values => {
-          console.log(values)
+          const { name, company, introduction} = values[FORM_ITEM_NAME]
           this.formRef.current.resetFields()
           this.props.showContact(false)
+          window.open(`mailto:andrew@recursion.dev?subject=${company ? company : name}&body=${introduction ? introduction : "Let's build an app!"}%0D%0A%0D%0AFrom,%0D%0A${name}`)
+        
       };
     
     render() {
@@ -52,7 +54,7 @@ class ContactDrawer extends Component {
             closable={false}
             onClose={this.onClose}
             visible={this.props.contact.showDrawer}
-            width='25vw'
+            width={350}
             >
                 <Form ref={this.formRef} {...layout} name="nest-messages" onFinish={this.onFinish} validateMessages={validateMessages}>
                   <Form.Item name={[FORM_ITEM_NAME, 'name']} label="Name" rules={[{ required: true }]}>
@@ -62,7 +64,7 @@ class ContactDrawer extends Component {
                     <Input />
                   </Form.Item>
                   <Form.Item name={[FORM_ITEM_NAME, 'company']} label="Company">
-                    <InputNumber />
+                    <Input />
                   </Form.Item>
                   <Form.Item name={[FORM_ITEM_NAME, 'website']} label="Website">
                     <Input />

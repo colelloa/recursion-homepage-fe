@@ -20,6 +20,9 @@ class Navbar extends Component {
             theme="dark" 
             mode="horizontal" 
             selectable={false}>
+            <Menu.Item key={'co'} onClick={() => this.props.showContact(true)}>
+                <><PhoneOutlined /> CONTACT</>
+            </Menu.Item>
             <Menu.Item key={'se'}>
                 <Link href="#services"  title={<><CodeOutlined /> SERVICES</>}>
                 </Link>
@@ -27,10 +30,6 @@ class Navbar extends Component {
             <Menu.Item key={'ab'}>
                 <Link href="#about"  title={<><CoffeeOutlined /> ABOUT</>}>
                 </Link>
-            </Menu.Item>
-
-            <Menu.Item key={'co'} onClick={() => this.props.showContact(true)}>
-                <><PhoneOutlined /> CONTACT</>
             </Menu.Item>
           </Menu>
           </Anchor>
