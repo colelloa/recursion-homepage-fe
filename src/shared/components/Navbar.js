@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Menu, Anchor } from 'antd';
+import { Menu, Anchor, BackTop } from 'antd';
 import { connect } from 'react-redux'
 import { showContact } from '../../features/contact/actions'
+import logo from '../../assets/logo.png'
 
 import {
     CoffeeOutlined,
@@ -20,8 +21,12 @@ class Navbar extends Component {
             theme="dark" 
             mode="horizontal" 
             selectable={false}>
+            <Menu.Item key={'ho'}>
+                <div className='logo'><img style={{height:'auto', width: 15, marginRight:3, marginBottom:4}} src={logo} alt='' /> Recursion Labs</div>
+            </Menu.Item>
+
             <Menu.Item key={'co'} onClick={() => this.props.showContact(true)}>
-                <><PhoneOutlined /> CONTACT</>
+                <div className='contact'><PhoneOutlined /> CONTACT</div>
             </Menu.Item>
             <Menu.Item key={'se'}>
                 <Link href="#services"  title={<><CodeOutlined /> SERVICES</>}>
